@@ -496,11 +496,13 @@ void macToTopic()
 // -------------------------------------------------------------------
 boolean mqtt_connect()
 {
-  char Firm_ver[30];
   char IPadd[20];
-  macToTopic();
+  char Firm_ver[40];
+
   ipaddress.toCharArray(IPadd, ipaddress.length());
   currentfirmware.toCharArray(Firm_ver, currentfirmware.length());
+
+  macToTopic();
 
   mqttclient.setServer(mqtt_server.c_str(), 8883);
   Serial.println("MQTT Connecting...");
