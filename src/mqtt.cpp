@@ -499,8 +499,8 @@ boolean mqtt_connect()
   char IPadd[20];
   char Firm_ver[40];
 
-  ipaddress.toCharArray(IPadd, ipaddress.length());
-  currentfirmware.toCharArray(Firm_ver, currentfirmware.length());
+  ipaddress.toCharArray(IPadd, (ipaddress.length()+1));
+  currentfirmware.toCharArray(Firm_ver, (currentfirmware.length()+1));
 
   macToTopic();
 
