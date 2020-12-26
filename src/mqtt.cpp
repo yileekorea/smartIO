@@ -29,6 +29,7 @@
 #include "input.h"
 #include "ota.h"
 #include "web_server.h"
+#include "wifi.h"
 
 #include <FS.h>                   //this needs to be first, or it all crashes and burns...
 
@@ -495,7 +496,11 @@ void macToTopic()
 // -------------------------------------------------------------------
 boolean mqtt_connect()
 {
+  char Firm_ver[30];
+  char IPadd[20];
   macToTopic();
+  ipaddress.toCharArray(IPadd, ipaddress.length());
+  currentfirmware.toCharArray(Firm_ver, currentfirmware.length());
 
   mqttclient.setServer(mqtt_server.c_str(), 8883);
   Serial.println("MQTT Connecting...");
@@ -506,7 +511,9 @@ boolean mqtt_connect()
 		// Publish
 		//if (mqttclient.publish((char *)topic_pub.c_str(), "hello MQTT connected...")) {
 		if (mqttclient.publish((char *)topic_pub.c_str(), (char *)topic_pub.c_str())) {
-        mqttclient.publish((char *)topic_pub.c_str(), "hello MQTT connected...");
+        mqttclient.publish((char *)topic_pub.c_str(), ("hello MQTT connected...IPadd="));
+        mqttclient.publish((char *)topic_pub.c_str(), IPadd);
+        mqttclient.publish((char *)topic_pub.c_str(), Firm_ver);
 	      Serial.println("publish ok");
 		}
 		else {

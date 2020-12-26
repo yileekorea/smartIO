@@ -258,6 +258,7 @@ void loop()
 
     			Serial.println();
     			Serial.println("Firmware: "+ currentfirmware);
+          foo();
     			if ((userTempset == 1)){
             Serial.println("send all sensor temp data");
     				//readFromOneWire();
@@ -297,6 +298,7 @@ void loop()
 void foo() {
 
   uint8_t var = 1;
+  Serial.println("Firmware: "+ currentfirmware);
 
   debugV("this is a debug - var %u", var);
   debugV("This is a println");
