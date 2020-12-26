@@ -18,7 +18,6 @@ script:
   - platformio run -e smartIO_deploy
   - platformio run -t buildfs -e smartIO_deploy
 
-  #- RELEASE_VER="release.0.0.6"
   - RELEASE_VER="R.0.0.1"
   #- LOCAL_VER="local.0.0.6"
   - echo $TRAVIS_BRANCH / $RELEASE_VER
