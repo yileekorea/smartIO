@@ -409,6 +409,7 @@ void mqttCallback(char* topic_sub, byte* payload, unsigned int length)
     for ( i = 0; i < numSensor; i++) {
       isOFF[i] = 0;
       //Timer_2[i] += 5000000UL;
+      Timer_1[i] = epochTime;   //point of turned OFF
     }
 
 	   userTempset = 1;
