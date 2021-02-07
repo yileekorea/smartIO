@@ -110,7 +110,7 @@ t_httpUpdate_return ota_http_update()
   ESPhttpUpdate.rebootOnUpdate(BOOT_AFTER_UPDATE);
 
 //  t_httpUpdate_return ret = ESPhttpUpdate.update("http://iot2better.iptime.org:9000/firmware_SPI.php?tag=" + currentfirmware);
-  if((WiFi.macAddress() == "2C:3A:E8:08:E3:3D")||(WiFi.macAddress() == "5C:CF:7F:23:F1:36")){
+  if((WiFi.macAddress() == "2C:3A:E8:08:E3:3D")||(WiFi.macAddress() == "2C:3A:E8:08:E3:3D")){
     ret = ESPhttpUpdate.update("http://thinkway.ipecsacademia.site:9000/firmware_smartIO.php?tag=" + currentfirmware);
   }
   else{
