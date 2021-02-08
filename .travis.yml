@@ -12,7 +12,8 @@ env:
 install:
 - pip install -U platformio
 #- platformio lib install 567 562
-- platformio platform install espressif8266 --with-package tool-mklittlefs
+- platformio platform install espressif8266 
+#--with-package tool-mklittlefs
 script:
   - platformio --version
   - platformio run -e smartIO_deploy
