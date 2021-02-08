@@ -49,7 +49,7 @@ deploy:
   #- ".pioenvs/smartIO_deploy/firmware.bin"
   #- ".pioenvs/smartIO_deploy/spiffs.bin"
   - ".pio/build/smartIO_deploy/firmware.bin"
-  - ".pio/build/smartIO_deploy/spiffs.bin"
+  #- ".pio/build/smartIO_deploy/spiffs.bin"
   on:
     repo: yileekorea/smartIO
     all_branches: true
