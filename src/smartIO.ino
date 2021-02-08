@@ -232,6 +232,9 @@ void loop()
         foo();
 */
       }
+      if (mTimeSeconds % 3600 == 0) { // Each 3600 seconds
+        do_reboot_exe();
+      }
     }
 
     ota_loop();
