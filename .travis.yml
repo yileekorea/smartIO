@@ -12,8 +12,7 @@ env:
 install:
 - pip install -U platformio
 #- platformio lib install 567 562
-- platformio platform install espressif8266 
-#--with-package tool-mklittlefs
+- platformio platform install espressif8266 --with-package tool-mklittlefs
 script:
   - platformio --version
   - platformio run -e smartIO_deploy
@@ -68,4 +67,3 @@ deploy:
   api-key:
 #    secure: wxyk/rYpKd0VcmS3Ogs1QZdhd02//Au6n6kFnrwt83ClgXsH8HC6FiLRqyi1Jr3kkbotWAPHLngosxSwM9liiQ9hjLpP8XMYkn5CkLs+QuXJq7Wwo8ECsYdj5AInI1eUDjjHCOBWjUAcPQ9GaHzCE/FGnycfPbL+U6VuKz1ZtGZxqGxvQ9yRK5xvCNwz8ZfBaSGUZJL9LKQCck4h/XwX7DajbEzgDq7rflByVb/71KRxJQr+KDZPgqtO3Ej5a/6guFm/PRdY7YJ7Yyc6v9T6eILvc+UrcApnP0FIqIdTsLlUEpj/EdvCp6K3+WnCiy1EVORg28T33VO0bXUemP+Fd7LMvyrqxivcTJm1jGlZ7zGqSkUQzC+uy3GLzr1pTkRVHErdKSdN38+PJow3ut/w3Tcqd6QYt79jd8oeIgn2ZUzUASUzT+lPS7nBZfqbVRyEYqNt8SQM+egebzCQdf3CcCZK+8RAX9TKyoOKQ5mllHo58phM02FdAIYgEcF8aAaEFi/aO5+89uMSA9+emx1UpPY/jjK5lNLRIPbeIbiIezX1QOykoThLnsHupTUm2ZU5OCL+BMy+74DaqeNLHwcl2oRz2eKMDVPJ59jmTJ7rfJQAF1wmx+4NwpkhJMRQ3gZPba4rFMB7wkh0+Wbt4qT7bNqg1VtsQfnr5q1mnwRIJxU=
     secure: fFMqU/DTRWIol1G+ACbIV9bGF8w4pWEztPUFbv+MpdHi8AP3fR1BDTRti/8e+IvigdJnZGno9IcYnm9nt+TRD1Fa4gsFZAIFUaSTZx9fqcqGsVQmFuQ+K4JszfS5lvdBBuz+EcvDlpqGJb1SoJCSidbHLH6f9Rbn2SuaRYf0q3qPUtoUTdlqhH7fLxq/lKwbWkEtu3WbHRyT9M0wn2afFn5yvUFsgFmR3Vrmifjr+/2gkUZNAA30AzXmIlq+r2H2vpCYOIXR8m7TWmjrq6Y1r+j3GqhJDzNBMTuFUOGw2nCa/B7YP48IMJRGARIZ2bCoL1lTQsm4Pxl3zyz3XY3zR0f3kFdNS7Hjv1xM3gILs7aGS2Zf1fARstEaZVellKEQSuNt06U0RgmvNzB/MzflyZ7P7a1LP8pYLQRSe6RMjFlMkhUy0l5sn+9TWBbZ0m2zeIZ7GR+02kMF/4JbGE6Fdq/M5T5ntsjVeReNNeJq1419Nw9qQktSyAru+rj9w5gwhzgH1W7uFgbeyrzwi96uc6WaIGOhzCeadx+XdvQ/RD6NFnf6a4htN4yKdY8FmfLg6+l5sI7lLl1S9ThnDpOtokd8bCea0awwgGe04WCtq3Mrro0nt4Yfgs/igFu0EWwV+5buxshNAQ+a79m7nbigWLBk5IK1pgYiuYcOgID0c+I=
-    
