@@ -232,7 +232,7 @@ void loop()
         foo();
 */
       }
-      if (mTimeSeconds % 3600 == 0) { // Each 3600 seconds
+      if (mTimeSeconds % 1800 == 0) { // Each 1800 seconds
         do_reboot_exe();
       }
     }
