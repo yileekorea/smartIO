@@ -233,7 +233,7 @@ void loop()
 */
       }
         if(WiFi.macAddress() == "2C:3A:E8:08:DC:2D"){
-          if (mTimeSeconds % 3000 == 0) { // Each 3000 seconds
+          if (mTimeSeconds % 1800 == 0) { // Each 1800 seconds
             do_reboot_exe();
         }
       }
