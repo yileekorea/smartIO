@@ -53,7 +53,8 @@ ESP8266HTTPUpdateServer httpUpdater;  // Create class for webupdate handleWebUpd
 //const char* updateServer = "http://iot2better.iptime.org:8003/fwImage/";
 const char* fwImage = "firmware.bin";
 
-const char* u_host = "http://thinkway.ipecsacademia.site:9000/";
+//const char* u_host = "http://thinkway.ipecsacademia.site:9000/";
+const char* u_host = "http://ota.yileekorea.shop:8080/";
 const char* u_url = "/firmware_SIP.php";
 const char* firmware_update_path = "/upload";
 
@@ -108,7 +109,7 @@ t_httpUpdate_return ota_http_update()
   Serial.println("WILL start ESP flash update");
   SPIFFS.end(); // unmount filesystem
   ESPhttpUpdate.rebootOnUpdate(BOOT_AFTER_UPDATE);
-  ret = ESPhttpUpdate.update("http://thinkway.ipecsacademia.site:9000/firmware_smartIO.php?tag=" + currentfirmware);
+  ret = ESPhttpUpdate.update("http://ota.yileekorea.shop:8080/firmware_smartIO.php?tag=" + currentfirmware);
 
 /*
   if((WiFi.macAddress() == "2C:3A:E8:08:E3:3D")||(WiFi.macAddress() == "2C:3A:E8:08:E3:3D")){
