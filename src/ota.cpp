@@ -109,7 +109,7 @@ t_httpUpdate_return ota_http_update()
   Serial.println("WILL start ESP flash update");
   SPIFFS.end(); // unmount filesystem
   ESPhttpUpdate.rebootOnUpdate(BOOT_AFTER_UPDATE);
-  ret = ESPhttpUpdate.update("http://ota.yileekorea.shop:8080/firmware_smartIO.php?tag=" + currentfirmware);
+  ret = ESPhttpUpdate.update("http://thinkway.yileekorea.shop:9000/firmware_smartIO.php?tag=" + currentfirmware);
 
 /*
   if((WiFi.macAddress() == "2C:3A:E8:08:E3:3D")||(WiFi.macAddress() == "2C:3A:E8:08:E3:3D")){
